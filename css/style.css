@@ -21,6 +21,10 @@ header.masthead .overlay {
 header.masthead h1 {
   font-size: 2rem;
 }
+.bean-to-bar > p {
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
 /* iphone x */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
   .resize {
@@ -80,7 +84,7 @@ header.masthead h1 {
 
   .list {
     column-count: 2;
-    padding: 5%;
+    padding: 0%;
   }
 
   .list-item {
@@ -96,13 +100,14 @@ header.masthead h1 {
 
 .banner-title {
   font-family: 'Lora', serif;
+  font-size: 42px;
 }
 .banner-title .h1color {
   color: #92b5a8;
   font-family: 'Lora', serif;
 }
 .cont-1 {
-  margin-bottom: 80px;
+  margin-bottom: 0px;
 }
 
 .add-break {
@@ -137,10 +142,12 @@ header.masthead h1 {
   font-family: 'Poppins', sans-serif;
 }
 
-font-poppins {
+.font-poppins > p {
   font-family: 'Poppins', sans-serif;
 }
-
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
 .lead-title {
   color: #92b5a8;
   font-size: large;
@@ -172,7 +179,9 @@ footer {
   margin-top: 5rem;
   display: flex;
 }
-
+.bio-header {
+  font-family: 'Lora', serif;
+}
 .bio-textbox {
   margin-top: 5rem;
   margin-bottom: 10rem;
@@ -181,4 +190,57 @@ footer {
 .service-intro {
   background-color: rgb(39, 47, 55);
   color: white;
+}
+
+.dottedline {
+  border-left: 2px dotted #92b5a8;
+}
+
+ul.service-item li.dotted-line {
+  position: relative;
+  /* so that pseudoelements are positioned relatively to their "li"s*/
+  /* use padding-bottom instead of margin-bottom.*/
+  margin-bottom: 0; /* This overrides previously specified margin-bottom */
+  padding-bottom: 2.5em;
+  list-style-type: none;
+}
+
+.no-bullet {
+  content: '' !important;
+  font-family: 'Poppins', sans-serif;
+}
+
+ul.service-item li.dotted-line:after {
+  /* bullets */
+  content: url('../assets/dot.png');
+  position: absolute;
+  left: -24px; /*adjust manually*/
+  top: 120px;
+}
+ul.service-item li.no-bullet:after {
+  /* bullets */
+  content: '';
+  position: absolute;
+  left: -24px; /*adjust manually*/
+  top: 120px;
+}
+ul.service-item li.dotted-line:before {
+  /* lines */
+  content: '';
+  position: absolute;
+  left: -16px; /* adjust manually */
+  border-left: 2.2px dotted #92b5a8;
+  height: 99.5%;
+}
+
+ul.service-item li.dotted-line:first-child:before {
+  /* first li's line */
+  top: -0.3px;
+  /* moves the line down so that it disappears under the bullet. Adjust manually */
+}
+
+ul.service-item li.dotted-line:last-child:before {
+  /* last li's line */
+  height: 120px;
+  /* shorten the line so it goes only up to the bullet. Is equal to first-child:before's top */
 }
