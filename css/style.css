@@ -1,7 +1,7 @@
 header.masthead {
   position: relative;
   background-color: #343a40;
-  background: url('../assets/banner.jpg') no-repeat center center;
+  background: url('../assets/banner.png') no-repeat center center;
   background-size: cover;
   padding-top: 8rem;
   padding-bottom: 8rem;
@@ -16,6 +16,13 @@ header.masthead .overlay {
   top: 0;
   left: 0;
   opacity: 0.3;
+}
+.app {
+  position: absolute;
+  right: 120px;
+  z-index: -1;
+  height: -100px;
+  top: 70px;
 }
 
 header.masthead h1 {
@@ -46,6 +53,10 @@ header.masthead h1 {
   .margin-5 {
     margin-left: 0px;
   }
+  .app {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 /* ipad */
@@ -56,6 +67,10 @@ header.masthead h1 {
   }
   .no-margin {
     margin-top: 0px !important;
+  }
+  .app {
+    display: none;
+    visibility: hidden;
   }
 }
 /* ipad pro */
@@ -68,12 +83,16 @@ header.masthead h1 {
   .no-margin {
     margin-top: 0px;
   }
+  .app {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 @media (min-width: 768px) {
   header.masthead {
-    padding-top: 17rem;
-    padding-bottom: 17rem;
+    padding-top: 11rem;
+    padding-bottom: 15rem;
   }
   .no-margin {
     margin-top: 0px !important;
@@ -181,7 +200,9 @@ footer {
 }
 .bio-header {
   font-family: 'Lora', serif;
+  position: relative;
 }
+
 .bio-textbox {
   margin-top: 5rem;
   margin-bottom: 10rem;
@@ -212,7 +233,7 @@ ul.service-item li.dotted-line {
 
 ul.service-item li.dotted-line:after {
   /* bullets */
-  content: url('../assets/dot.png');
+  content: url('../assets/dot-1.png');
   position: absolute;
   left: -24px; /*adjust manually*/
   top: 120px;
@@ -228,7 +249,7 @@ ul.service-item li.dotted-line:before {
   /* lines */
   content: '';
   position: absolute;
-  left: -16px; /* adjust manually */
+  left: -19px; /* adjust manually */
   border-left: 2.2px dotted #92b5a8;
   height: 99.5%;
 }
