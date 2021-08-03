@@ -3,11 +3,25 @@ header.masthead {
   background-color: #343a40;
   background: url('../assets/banner.png') no-repeat center center;
   background-size: cover;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 18rem;
+  padding-bottom: 12rem;
   font-family: 'Lora', serif;
+  margin-top: -20px;
 }
-
+.button {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 25px 0px;
+  padding: 15px 10px;
+  width: 220px;
+  background: white;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: bold;
+  line-height: 10px;
+}
 header.masthead .overlay {
   position: absolute;
   background-color: #212529;
@@ -19,10 +33,11 @@ header.masthead .overlay {
 }
 .app {
   position: absolute;
-  right: 120px;
+  right: 50px;
   z-index: -1;
-  height: -100px;
-  top: 70px;
+  top: 20px;
+  height: 140px;
+  content: url(../assets/app.png);
 }
 
 header.masthead h1 {
@@ -31,6 +46,9 @@ header.masthead h1 {
 .bean-to-bar > p {
   font-size: 1rem;
   font-family: 'Poppins', sans-serif;
+}
+.list-item {
+  margin-bottom: 10px;
 }
 /* iphone x */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
@@ -47,15 +65,32 @@ header.masthead h1 {
     column-count: 1 !important;
   }
   .list-item {
-    margin-bottom: 0px;
     font-size: 0.8rem;
   }
+
   .margin-5 {
     margin-left: 0px;
   }
   .app {
     display: none;
     visibility: hidden;
+  }
+  header.masthead {
+    padding-top: 10rem;
+    padding-bottom: 15rem;
+    margin-top: -auto;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #first {
+    order: 1;
+  }
+  #second {
+    order: 2;
+  }
+  #third {
+    order: 3;
   }
 }
 
@@ -87,16 +122,24 @@ header.masthead h1 {
     display: none;
     visibility: hidden;
   }
+  header.masthead {
+    height: 90%;
+    width: 90%;
+    padding-top: 10rem;
+    padding-bottom: 15rem;
+  }
 }
 
 @media (min-width: 768px) {
   header.masthead {
-    padding-top: 11rem;
+    padding-top: 10rem;
     padding-bottom: 15rem;
+    margin-top: -20px;
   }
   .no-margin {
     margin-top: 0px !important;
   }
+
   header.masthead h1 {
     font-size: 3rem;
   }
@@ -112,6 +155,60 @@ header.masthead h1 {
   .no-margin {
     margin-top: 75px;
   }
+}
+
+@media (min-width: 1300px) {
+  ul.service-item li.dotted-line {
+    position: relative;
+    /* so that pseudoelements are positioned relatively to their "li"s*/
+    /* use padding-bottom instead of margin-bottom.*/
+    margin-bottom: 0; /* This overrides previously specified margin-bottom */
+    padding-bottom: 2.5em;
+    list-style-type: none;
+  }
+
+  ul.service-item li.dotted-line:after {
+    /* bullets */
+    content: url('../assets/dot-1.png');
+    position: absolute;
+    left: -24px; /*adjust manually*/
+    top: 120px;
+  }
+  ul.service-item li.no-bullet:after {
+    /* bullets */
+    content: '';
+    position: absolute;
+    left: -24px; /*adjust manually*/
+    top: 120px;
+  }
+  ul.service-item li.dotted-line:before {
+    /* lines */
+    content: '';
+    position: absolute;
+    left: -19px; /* adjust manually */
+    border-left: 2.2px dotted #92b5a8;
+    height: 99.9%;
+  }
+
+  ul.service-item li.dotted-line:first-child:before {
+    /* first li's line */
+    top: -0.3px;
+    /* moves the line down so that it disappears under the bullet. Adjust manually */
+  }
+
+  ul.service-item li.dotted-line:last-child:before {
+    /* last li's line */
+    height: 121px;
+    /* shorten the line so it goes only up to the bullet. Is equal to first-child:before's top */
+  }
+}
+.main-header {
+  font-family: 'Lora', serif;
+  font-size: 52px;
+}
+
+ul.service-item {
+  list-style-type: none;
 }
 .container-banner {
   margin-top: 15rem;
@@ -158,6 +255,7 @@ header.masthead h1 {
 }
 .leader {
   color: white;
+  font-size: 17px;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -169,7 +267,6 @@ header.masthead h1 {
 }
 .lead-title {
   color: #92b5a8;
-  font-size: large;
   padding-bottom: 3rem;
 }
 
@@ -178,8 +275,8 @@ header.masthead h1 {
   height: 8rem;
 }
 .title {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 footer {
   background-color: black;
@@ -207,61 +304,18 @@ footer {
   margin-top: 5rem;
   margin-bottom: 10rem;
 }
-
+bio-text {
+  font-size: 32px;
+}
 .service-intro {
   background-color: rgb(39, 47, 55);
   color: white;
-}
-
-.dottedline {
-  border-left: 2px dotted #92b5a8;
-}
-
-ul.service-item li.dotted-line {
-  position: relative;
-  /* so that pseudoelements are positioned relatively to their "li"s*/
-  /* use padding-bottom instead of margin-bottom.*/
-  margin-bottom: 0; /* This overrides previously specified margin-bottom */
-  padding-bottom: 2.5em;
-  list-style-type: none;
 }
 
 .no-bullet {
   content: '' !important;
   font-family: 'Poppins', sans-serif;
 }
-
-ul.service-item li.dotted-line:after {
-  /* bullets */
-  content: url('../assets/dot-1.png');
-  position: absolute;
-  left: -24px; /*adjust manually*/
-  top: 120px;
-}
-ul.service-item li.no-bullet:after {
-  /* bullets */
-  content: '';
-  position: absolute;
-  left: -24px; /*adjust manually*/
-  top: 120px;
-}
-ul.service-item li.dotted-line:before {
-  /* lines */
-  content: '';
-  position: absolute;
-  left: -19px; /* adjust manually */
-  border-left: 2.2px dotted #92b5a8;
-  height: 99.5%;
-}
-
-ul.service-item li.dotted-line:first-child:before {
-  /* first li's line */
-  top: -0.3px;
-  /* moves the line down so that it disappears under the bullet. Adjust manually */
-}
-
-ul.service-item li.dotted-line:last-child:before {
-  /* last li's line */
-  height: 120px;
-  /* shorten the line so it goes only up to the bullet. Is equal to first-child:before's top */
+.footer-wordings {
+  width: 650px;
 }
