@@ -115,9 +115,6 @@ header.masthead h1 {
     max-width: 230px;
     height: 230px;
   }
-  .remove-on-large {
-    display: none;
-  }
 }
 
 @media only screen and (min-width: 220px) and (max-width: 667px) {
@@ -138,9 +135,13 @@ header.masthead h1 {
   }
 }
 
-@media only screen and (min-width: 667px) {
-  .remove-on-large {
+@media only screen and (max-width: 667px) {
+  .remove {
     display: none;
+  }
+}
+@media only screen and (min-width: 668px) {
+  .remove-on-large {
     display: none;
   }
 }
@@ -238,6 +239,7 @@ header.masthead h1 {
     /* shorten the line so it goes only up to the bullet. Is equal to first-child:before's top */
   }
 }
+
 .main-header {
   font-family: 'Lora', serif;
   font-size: 52px;
