@@ -119,6 +119,7 @@ header.masthead h1 {
     display: none;
   }
 }
+
 @media only screen and (min-width: 220px) and (max-width: 667px) {
   .resize {
     max-width: 200px;
@@ -136,8 +137,10 @@ header.masthead h1 {
     display: none;
   }
 }
+
 @media only screen and (min-width: 667px) {
   .remove-on-large {
+    display: none;
     display: none;
   }
 }
