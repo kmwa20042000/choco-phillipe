@@ -84,9 +84,6 @@ header.masthead h1 {
     padding-bottom: 15rem;
     margin-top: -auto;
   }
-  .remove-on-large {
-    display: none;
-  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -164,9 +161,6 @@ header.masthead h1 {
     padding-top: 10rem;
     padding-bottom: 15rem;
   }
-  .remove-on-large {
-    display: none;
-  }
 }
 
 @media (min-width: 768px) {
@@ -193,9 +187,6 @@ header.masthead h1 {
   }
   .no-margin {
     margin-top: 75px;
-  }
-  .remove-on-large {
-    display: none;
   }
 }
 
