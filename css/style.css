@@ -56,6 +56,10 @@ header.masthead h1 {
     max-width: 250px;
     height: auto;
   }
+  .bio-pic {
+    max-width: 230px;
+    height: 230px;
+  }
   .no-margin {
     margin-top: 0px !important;
   }
@@ -79,6 +83,9 @@ header.masthead h1 {
     padding-top: 10rem;
     padding-bottom: 15rem;
     margin-top: -auto;
+  }
+  .remove-on-large {
+    display: none;
   }
 }
 
@@ -107,6 +114,35 @@ header.masthead h1 {
     display: none;
     visibility: hidden;
   }
+  .bio-pic {
+    max-width: 230px;
+    height: 230px;
+  }
+  .remove-on-large {
+    display: none;
+  }
+}
+@media only screen and (min-width: 220px) and (max-width: 667px) {
+  .resize {
+    max-width: 200px;
+    height: 230px;
+  }
+  .main-header p {
+    font-size: 29px;
+  }
+  .bio-pic {
+    max-width: 230px;
+    height: 230px;
+    margin-bottom: 100px;
+  }
+  .remove {
+    display: none;
+  }
+}
+@media only screen and (min-width: 667px) {
+  .remove-on-large {
+    display: none;
+  }
 }
 /* ipad pro */
 @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
@@ -127,6 +163,9 @@ header.masthead h1 {
     width: 90%;
     padding-top: 10rem;
     padding-bottom: 15rem;
+  }
+  .remove-on-large {
+    display: none;
   }
 }
 
@@ -155,9 +194,12 @@ header.masthead h1 {
   .no-margin {
     margin-top: 75px;
   }
+  .remove-on-large {
+    display: none;
+  }
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1300px) and (max-width: 1760px) {
   ul.service-item li.dotted-line {
     position: relative;
     /* so that pseudoelements are positioned relatively to their "li"s*/
