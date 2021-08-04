@@ -355,3 +355,7 @@ bio-text {
 .footer-wordings {
   width: 650px;
 }
+@font-face {
+  font-family: 'Lora';
+  src: url('../assets/fonts/Lora-Medium.ttf') format('woff2');
+}
