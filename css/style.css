@@ -357,5 +357,6 @@ bio-text {
 }
 @font-face {
   font-family: 'Lora';
-  src: url('../assets/fonts/Lora-Medium.ttf') format('woff2');
+  src: url('../assets/fonts/Lora-Medium.ttf') format('woff2'),
+    url('../assets/fonts/Lora-Medium.ttf') format('woff');
 }
